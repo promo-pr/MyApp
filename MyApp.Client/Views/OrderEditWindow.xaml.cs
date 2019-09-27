@@ -1,15 +1,6 @@
 ﻿using MyApp.Core.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Text.Json;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace MyApp.Client.Views
 {
@@ -23,9 +14,10 @@ namespace MyApp.Client.Views
             InitializeComponent();
         }
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e) 
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             Order order = new Order { Price = int.Parse(PriceBox.Text), Description = DescriptionBox.Text };
+            var js = JsonSerializer.Serialize(order);
         }
     }
 }

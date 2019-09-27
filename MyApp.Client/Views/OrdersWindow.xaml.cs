@@ -12,7 +12,7 @@ namespace MyApp.Client.Views
             InitializeComponent();
         }
 
-        private void AddButton_Click(object sender, RoutedEventArgs e) 
+        private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             OrderEditWindow win = new OrderEditWindow();
             win.Show();
