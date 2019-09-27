@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.Json;
 
 namespace MyApp.Core.Models
 {
@@ -11,5 +12,7 @@ namespace MyApp.Core.Models
         public string Description { get; set; }
 
         public DateTime Created { get; set; }
+
+        public static Order Parse(string json) => JsonSerializer.Deserialize<Order>(json);
     }
 }

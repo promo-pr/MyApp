@@ -1,15 +1,18 @@
-﻿<Window x:Class="MyApp.Client.Views.OrdersWindow"
+﻿<Window x:Class="MyApp.Client.Views.OrderEditWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyApp.Client.Views"
         mc:Ignorable="d"
-        Title="Договора" Height="450" Width="800">
-    <Grid Margin="10">
+        Title="OrderEditWindow" Height="450" Width="800">
+    <Grid>
         <StackPanel>
-            <Button Content="Создать" Click="AddButton_Click"/>
-            <DataGrid x:Name="OrdersGrid"/>
+            <Label>Сумма</Label>
+            <TextBox x:Name="PriceBox" />
+            <Label>Примечание</Label>
+            <TextBox x:Name="DescriptionBox" TextWrapping="Wrap" AcceptsReturn="True" Height="100"/>
+            <Button Content="Сохранить" Click="SaveButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>
