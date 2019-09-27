@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace MyApp.Client.View
+namespace MyApp.Client.Views
 {
     /// <summary>
     /// Interaction logic for OrdersWindow.xaml
